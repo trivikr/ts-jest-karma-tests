@@ -1,6 +1,6 @@
 {
   "name": "ts-jest-karma-tests",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Experiment with running Jest tests in real browser using karma",
   "main": "index.js",
   "scripts": {
