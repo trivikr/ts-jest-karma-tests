@@ -1,10 +1,10 @@
 {
   "name": "ts-jest-karma-tests",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Experiment with running Jest tests in real browser using karma",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest"
   },
   "repository": {
     "type": "git",
@@ -25,5 +25,8 @@
   "bugs": {
     "url": "https://github.com/trivikr/ts-jest-karma-tests/issues"
   },
-  "homepage": "https://github.com/trivikr/ts-jest-karma-tests#readme"
+  "homepage": "https://github.com/trivikr/ts-jest-karma-tests#readme",
+  "devDependencies": {
+    "jest": "^26.6.3"
+  }
 }
