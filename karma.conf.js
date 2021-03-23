@@ -3,8 +3,7 @@ module.exports = function (config) {
     frameworks: ["jasmine", "karma-typescript"],
     files: ["src/**/*.ts"],
     preprocessors: {
-      "./karma.setup.js": ["karma-typescript"],
-      "src/**/*.ts": ["karma-typescript"],
+      "**/*.ts": ["karma-typescript"],
     },
     reporters: ["progress", "karma-typescript"],
     browsers: ["ChromeHeadlessNoSandbox"],
