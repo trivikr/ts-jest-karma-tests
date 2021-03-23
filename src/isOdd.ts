@@ -8,7 +8,9 @@ const isOdd = (value: number) => {
     throw new Error(`Number should be an integer. Received ${value}.`);
   }
   if (!Number.isSafeInteger(value)) {
-    throw new RangeError("Number should be a safe interger.");
+    throw new RangeError(
+      `Number should be a safe interger. Received ${value}.`
+    );
   }
   return value % 2 === 1;
 };
