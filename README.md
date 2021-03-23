@@ -7,4 +7,5 @@ Experiment with running Jest tests in real browser using karma
 - Run `yarn test:browser` to run browser tests.
 - Run `yarn build` to run tsc compiler.
 
-Jest tests can be run without `yarn build` thanks to `ts-jest` and `karma-typescript`.
+The unit tests using Jest (Node.js) and Karma (browser) can be run without
+`yarn build` thanks to `ts-jest` and `karma-typescript`.
