@@ -1,9 +1,9 @@
 module.exports = function (config) {
   config.set({
     frameworks: ["jasmine", "karma-typescript"],
-    files: ["src/**/*.ts"],
+    files: ["karma.setup.js", "src/**/*.ts"],
     preprocessors: {
-      "./karma.setup.js": ["karma-typescript"],
+      "karma.setup.js": ["karma-typescript"],
       "src/**/*.ts": ["karma-typescript"],
     },
     reporters: ["progress", "karma-typescript"],
@@ -15,5 +15,14 @@ module.exports = function (config) {
       },
     },
     singleRun: true,
+    karmaTypescriptConfig: {
+      compilerOptions: {
+        allowJs: true,
+        esModuleInterop: true,
+      },
+      bundlerOptions: {
+        addNodeGlobals: false,
+      },
+    },
   });
 };
