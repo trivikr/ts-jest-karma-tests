@@ -5,7 +5,7 @@ const isOdd = (value: number) => {
     );
   }
   if (!Number.isInteger(value)) {
-    throw new Error("Number should be an integer.");
+    throw new Error(`Number should be an integer. Received ${value}.`);
   }
   if (!Number.isSafeInteger(value)) {
     throw new RangeError("Number should be a safe interger.");
