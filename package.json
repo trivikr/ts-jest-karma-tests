@@ -1,11 +1,12 @@
 {
   "name": "ts-jest-karma-tests",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Experiment with running Jest tests in real browser using karma",
   "main": "index.js",
   "scripts": {
     "build": "tsc",
-    "test": "jest --coverage"
+    "test": "jest --coverage",
+    "test:browser": "karma start"
   },
   "repository": {
     "type": "git",
@@ -29,7 +30,13 @@
   "homepage": "https://github.com/trivikr/ts-jest-karma-tests#readme",
   "devDependencies": {
     "@types/jest": "^26.0.21",
+    "expect": "^26.6.2",
     "jest": "^26.6.3",
+    "jest-mock": "^26.6.2",
+    "karma": "^6.2.0",
+    "karma-chrome-launcher": "^3.1.0",
+    "karma-jasmine": "^4.0.1",
+    "karma-typescript": "^5.5.0",
     "ts-jest": "^26.5.4",
     "typescript": "^4.2.3"
   }
