@@ -5,13 +5,13 @@ describe(isOdd.name, () => {
     [true, 1],
     [false, 2],
   ] as [boolean, number][]).forEach(([expected, number]) => {
-    it(`returns ${expected} for ${number}`, () => {
+    test(`returns ${expected} for ${number}`, () => {
       expect(isOdd(number)).toBe(expected);
     });
   });
 
   [null, true, "str", [], {}].forEach((notNumber) => {
-    it(`throws TypeError for ${typeof notNumber}`, () => {
+    test(`throws TypeError for ${typeof notNumber}`, () => {
       expect(() => {
         // @ts-ignore: Argument is not assignable to parameter of type 'number'
         isOdd(notNumber);
@@ -22,7 +22,7 @@ describe(isOdd.name, () => {
   });
 
   [1.01, Number.EPSILON, Number.NaN, Infinity].forEach((notInteger) => {
-    it(`throws TypeError for ${notInteger}`, () => {
+    test(`throws TypeError for ${notInteger}`, () => {
       expect(() => {
         // @ts-ignore: Argument is not assignable to parameter of type 'number'
         isOdd(notInteger);
@@ -35,7 +35,7 @@ describe(isOdd.name, () => {
     Number.MIN_SAFE_INTEGER - 1,
     Math.pow(2, 53),
   ].forEach((notSafeInteger) => {
-    it(`throws RangeError for ${notSafeInteger}`, () => {
+    test(`throws RangeError for ${notSafeInteger}`, () => {
       expect(() => {
         // @ts-ignore: Argument is not assignable to parameter of type 'number'
         isOdd(notSafeInteger);
