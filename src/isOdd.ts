@@ -1,6 +1,8 @@
 const isOdd = (value: number) => {
   if (typeof value !== "number") {
-    throw new TypeError("Data of type number expected.");
+    throw new TypeError(
+      `Data of type "number" expected. Received ${typeof value}.`
+    );
   }
   if (!Number.isInteger(value)) {
     throw new Error("Number should be an integer.");
