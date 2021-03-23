@@ -1,8 +1,13 @@
 import { isOdd } from "./isOdd";
 
 describe(isOdd.name, () => {
-  it("returns true for 1", () => {
-    expect(isOdd(1)).toBe(true);
+  ([
+    [true, 1],
+    [false, 2],
+  ] as [boolean, number][]).forEach(([expected, number]) => {
+    it(`returns ${expected} for ${number}`, () => {
+      expect(isOdd(number)).toBe(expected);
+    });
   });
 
   [null, true, "str", [], {}].forEach((notNumber) => {
