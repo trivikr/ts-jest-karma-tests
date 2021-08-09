@@ -29,7 +29,6 @@
   },
   "homepage": "https://github.com/trivikr/ts-jest-karma-tests#readme",
   "devDependencies": {
-    "@types/jest": "^26.0.24",
     "expect": "^27.0.6",
     "jest": "^27.0.6",
     "jest-mock": "^27.0.6",
